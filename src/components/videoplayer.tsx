@@ -85,7 +85,7 @@ function VideoPlayer() {
         id="video"
         ref={videoRef}
         className="lg:w-fit lg:h-fit lg:rounded-[25px] rounded-[11px]"
-        src="/laughs.mp4"
+        src="/sv.mp4"
       ></video>
 
       <div className="bg-transparent mt-[-60%] z-30">

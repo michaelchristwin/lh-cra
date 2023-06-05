@@ -68,7 +68,7 @@ function Reviews(): JSX.Element {
             key={index}
             className={`w-4 h-4 mr-1 rounded-[50%] border-black border ${
               currentPage === index + 1 ? "bg-black" : "bg-white"
-            } hover:bg-black`}
+            } hover:bg-black cursor-pointer`}
             onClick={() => handlePageButtonClick(index + 1)}
           ></button>
         ))}
