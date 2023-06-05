@@ -76,5 +76,17 @@ const ReviewData: Review[] = [
     review:
       "Mike has helped my daughter with not only mathmatics but also important lifeskills and i dont know what i would do if i hadn't been refered to him by one of my close friends",
   },
+  {
+    name: "TBjv Reynolds",
+    img: require("../images/Avatars/avatar2.png"),
+    review:
+      "I can't recommend enough the help from Learnhall.  My high school sophomore student was struggling with math and an hour a week with Michael really made the difference. Not only with the basic principles, but confidence building as well!  Thank you Learnhall.",
+  },
+  {
+    name: "M. Burghelea",
+    img: require("../images/Avatars/avatar2.png"),
+    review:
+      "I have been looking for a math tutor for the past year to work with my teenage son and finally we found Mike. He is very knowledgeable and fun to work with. Our son is looking forward to keep working with him and for me that is awesome. Thank you Mike.",
+  },
 ];
 export default ReviewData;
