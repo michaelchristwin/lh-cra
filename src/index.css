@@ -48,7 +48,7 @@
 }
 .d-review {
   font-size: 18px;
-  line-height: 26px;
+  line-height: 24px;
   text-align: left !important;
 }
 .book-btn a {
@@ -206,9 +206,9 @@ body {
   width: fit-content;
 }
 .review {
-  width: 360px;
-  height: 315px;
-  padding: 20px;
+  width: 365px;
+  height: 310px;
+  padding: 18px;
 }
 .reviews-sect {
   padding: 10px;

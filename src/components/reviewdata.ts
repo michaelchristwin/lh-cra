@@ -36,12 +36,7 @@ const ReviewData: Review[] = [
     review:
       "I've been working with Mike for the last 2 years, and his tutoring is phenomenal. We work on math and while working through Math 95 last year, he helped me do the best I could. Real stand up guy, super smart, 10/10 level of helpfulness.",
   },
-  {
-    name: "Tara C",
-    img: require("../images/Avatars/avatar5.png"),
-    review:
-      "Mike is an excellent tutor who's been helping my daughter for over a year through 7th and 8th grade math. Not only is he highly knowledgeable, but he's always encouraging and builds up her self confidence. She always leaves her lesson with a smile.",
-  },
+
   {
     name: "Tigran Mkrtychyan",
     img: require("../images/Avatars/avatar6.png"),
@@ -64,12 +59,7 @@ const ReviewData: Review[] = [
     review:
       "Michael hasn't only been the tutor that got me through highschool, I honestly wouldn't be where I am in my life without him helping me not only with my grades. I can honestly say he helped me be the man I have become today. I would recommend him to anyone.",
   },
-  {
-    name: "Rachael Friedstrom",
-    img: require("../images/Avatars/avatar6.png"),
-    review:
-      "My daughter loves working with Vishnu. My daughter will be so confused about her math and then come home from a tutoring session with Vishnu and actually be excited about it. She even got an A on her last exam and asked us to frame it.",
-  },
+
   {
     name: "Kristin Smith",
     img: require("../images/Avatars/avatar3.png"),
@@ -83,10 +73,39 @@ const ReviewData: Review[] = [
       "I can't recommend enough the help from Learnhall.  My high school sophomore student was struggling with math and an hour a week with Michael really made the difference. Not only with the basic principles, but confidence building as well!  Thank you Learnhall.",
   },
   {
+    name: "Rachael Friedstrom",
+    img: require("../images/Avatars/avatar6.png"),
+    review:
+      "My daughter loves working with Vishnu. My daughter will be so confused about her math and then come home from a tutoring session with Vishnu and actually be excited about it. She even got an A on her last exam and asked us to frame it.",
+  },
+  {
     name: "M. Burghelea",
     img: require("../images/Avatars/avatar2.png"),
     review:
       "I have been looking for a math tutor for the past year to work with my teenage son and finally we found Mike. He is very knowledgeable and fun to work with. Our son is looking forward to keep working with him and for me that is awesome. Thank you Mike.",
+  },
+  {
+    name: "Terry Jabali",
+    img: require("../images/Avatars/avatar2.png"),
+    review:
+      "While pleasant missed many appointments in my first rating; Michael was professional enough to follow up and has since been re-engaged;  he has shown genuine concern about my son's progress Thank you",
+  },
+  {
+    name: "Tara C",
+    img: require("../images/Avatars/avatar5.png"),
+    review:
+      "Mike is an excellent tutor who's been helping my daughter for over a year through 7th and 8th grade math. Not only is he highly knowledgeable, but he's always encouraging and builds up her self confidence. She always leaves her lesson with a smile.",
+  },
+  {
+    name: "Orbem Tarnum",
+    img: require("../images/Avatars/avatar2.png"),
+    review:
+      "Mike has to be one of the most amazing people I've encountered. His share attention to detail is comforting. It makes you feel like you could give him all your cares in the world, and he'll sort them out for you. I highly recommend him and his services",
+  },
+  {
+    name: "Callie Martin",
+    img: require("../images/Avatars/avatar6.png"),
+    review: `Learnhall (& tutor Mark) helped my son find academic success and confidence in Geometry and Algebra 2 over the last two years. We all love Mark! Not only is he extremely professional and good at what he does, but his attitude is always friendly, encouraging and supportive. Five stars!`,
   },
 ];
 export default ReviewData;
