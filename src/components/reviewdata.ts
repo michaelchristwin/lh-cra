@@ -6,12 +6,6 @@ type Review = {
 
 const ReviewData: Review[] = [
   {
-    name: "M Burghelea",
-    img: require("../images/Avatars/avatar1.png"),
-    review:
-      "I have been looking for a math tutor in the past year to work with my teenager son and finally we found Mike. He is very knowledgeable and fun to work with. Our son is looking forward to keep working with him and for me that is awesome.",
-  },
-  {
     name: "Charlie Warren",
     img: require("../images/Avatars/avatar2.png"),
     review:
@@ -41,12 +35,12 @@ const ReviewData: Review[] = [
     name: "Tigran Mkrtychyan",
     img: require("../images/Avatars/avatar6.png"),
     review:
-      "Asher is an amazing tutor and has helped to put me on track to pass my business calc class and I didn't think I'd even have a chance, 100% would recommend",
+      "Asher is an amazing tutor and has helped to put me on track to pass my business calc class and I didn't think I'd even have a chance, 100% would recommend.",
   },
   {
     name: "Ann S",
     img: require("../images/Avatars/avatar3.png"),
-    review: `Mike tutored my son a year ago and we still keep in touch and talk about him. He was very good at keeping him positive and interested and feeling good about the material and himself. Started doing excellerated middle school math and then some writing!`,
+    review: `Mike tutored my son a year ago and we still keep in touch and talk about him. He was very good at keeping him positive and interested and feeling good about the material and himself. Started doing excellerated middle school math and then some writing!.`,
   },
   {
     name: "Evan Zenner",
@@ -55,7 +49,7 @@ const ReviewData: Review[] = [
   },
   {
     name: "Andrew Rockefeller",
-    img: require("../images/Avatars/avatar2.png"),
+    img: require("../images/Avatars/avatar7.png"),
     review:
       "Michael hasn't only been the tutor that got me through highschool, I honestly wouldn't be where I am in my life without him helping me not only with my grades. I can honestly say he helped me be the man I have become today. I would recommend him to anyone.",
   },
@@ -68,7 +62,7 @@ const ReviewData: Review[] = [
   },
   {
     name: "TBjv Reynolds",
-    img: require("../images/Avatars/avatar2.png"),
+    img: require("../images/Avatars/avatar7.png"),
     review:
       "I can't recommend enough the help from Learnhall.  My high school sophomore student was struggling with math and an hour a week with Michael really made the difference. Not only with the basic principles, but confidence building as well!  Thank you Learnhall.",
   },
@@ -80,7 +74,7 @@ const ReviewData: Review[] = [
   },
   {
     name: "M. Burghelea",
-    img: require("../images/Avatars/avatar2.png"),
+    img: require("../images/Avatars/avatar7.png"),
     review:
       "I have been looking for a math tutor for the past year to work with my teenage son and finally we found Mike. He is very knowledgeable and fun to work with. Our son is looking forward to keep working with him and for me that is awesome. Thank you Mike.",
   },
@@ -88,7 +82,7 @@ const ReviewData: Review[] = [
     name: "Terry Jabali",
     img: require("../images/Avatars/avatar2.png"),
     review:
-      "While pleasant missed many appointments in my first rating; Michael was professional enough to follow up and has since been re-engaged;  he has shown genuine concern about my son's progress Thank you",
+      "While pleasant missed many appointments in my first rating; Michael was professional enough to follow up and has since been re-engaged;  he has shown genuine concern about my son's progress, Thank you.",
   },
   {
     name: "Tara C",
@@ -104,7 +98,7 @@ const ReviewData: Review[] = [
   },
   {
     name: "Callie Martin",
-    img: require("../images/Avatars/avatar6.png"),
+    img: require("../images/Avatars/avatar7.png"),
     review: `Learnhall (& tutor Mark) helped my son find academic success and confidence in Geometry and Algebra 2 over the last two years. We all love Mark! Not only is he extremely professional and good at what he does, but his attitude is always friendly, encouraging and supportive. Five stars!`,
   },
 ];
