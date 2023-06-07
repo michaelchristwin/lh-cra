@@ -55,17 +55,17 @@ function BecomeATutor() {
     const errors: Partial<Data> = {};
 
     if (!values.username) {
-      errors.username = "Username is required!";
+      errors.username = "Username is required";
     }
 
     if (!values.email) {
-      errors.email = "Email is required!";
+      errors.email = "Email is required";
     } else if (!emailRegex.test(values.email)) {
       errors.email = "Enter a valid email";
     }
 
     if (!values.phone) {
-      errors.phone = "Phone number is required!";
+      errors.phone = "Phone number is required";
     } else if (!phoneRegex.test(values.phone)) {
       errors.phone = "Please enter a number";
     }
