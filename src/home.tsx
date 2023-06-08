@@ -14,14 +14,12 @@ function Home() {
           src={TopElipse}
           alt="svg"
           className="draw1 lg:h-[130px] lg:w-[100px] h-[60px] w-[48px]"
-          height={130}
-          width={100}
         />
       </section>
       <Hero />
       <Steps />
       <section className="text-center r-sect lg:bg-[url('./images/tutoring.jpg')] bg-cover py-[40px]">
-        <div className="what-parent">
+        <div>
           <h1
             className={`font-[500] lg:text-[2.375rem] text-[1.7rem] lg:text-white text-black`}
             style={{ fontFamily: "CustomFont" }}

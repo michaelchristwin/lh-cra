@@ -21,7 +21,7 @@ function ReviewsSm() {
 
   return (
     <div>
-      <section className="reviews-sect flex justify-center">
+      <section className="p-[9px] flex justify-center">
         <div className="shadow border-0 review rounded ml-4" key={review.name}>
           <div className="flex">
             <img
@@ -47,18 +47,18 @@ function ReviewsSm() {
       </section>
       <span className="flex justify-center">
         <button
-          className="active:bg-[#eb7669] bg-black mr-1 hover:bg-[#b84b40] px-1 text-white rounded text-[13px] h-[20px] disabled:bg-slate-400"
+          className="active:bg-[#eb7669] bg-black mr-1 hover:bg-[#b84b40] px-2 text-white rounded text-[15px] h-[22px] disabled:bg-slate-400"
           onClick={prev}
           disabled={disablePrev}
         >
-          Previous
+          {`<`}
         </button>
         <button
-          className="active:bg-[#eb7669] hover:bg-[#b84b40] bg-black px-1 text-white rounded text-[13px] disabled:bg-slate-400"
+          className="active:bg-[#eb7669] hover:bg-[#b84b40] bg-black px-2 text-white rounded text-[15px] disabled:bg-slate-400 h-[22px]"
           onClick={next}
           disabled={disableNext}
         >
-          Next
+          {`>`}
         </button>
       </span>
     </div>
