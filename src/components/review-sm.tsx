@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ReviewData from "./reviewdata";
+import { FiveStar } from "../images";
 
 function ReviewsSm() {
   const [view, setView] = useState(0);
@@ -13,8 +14,11 @@ function ReviewsSm() {
       setView((prevView) => prevView - 1);
     }
   };
+  const disablePrev = view === 0; // Disable previous button at the start
+  const disableNext = view === ReviewData.length - 1; // Disable next button at the end
 
   const review = ReviewData[view];
+
   return (
     <div>
       <section className="reviews-sect flex justify-center">
@@ -30,7 +34,7 @@ function ReviewsSm() {
             <div>
               <h3 className="r-name">{review.name}</h3>
               <img
-                src={`/5star.png`}
+                src={FiveStar}
                 alt="rating"
                 className="star"
                 height={25}
@@ -43,13 +47,19 @@ function ReviewsSm() {
       </section>
       <span className="flex justify-center">
         <button
-          className="w-2 h-2 active:bg-orange-400 bg-white mr-1 rounded-[50%] border border-black hover:bg-[#b84b40]"
-          onClick={() => prev()}
-        ></button>
+          className="active:bg-[#eb7669] bg-black mr-1 hover:bg-[#b84b40] px-1 text-white rounded text-[13px] h-[20px] disabled:bg-slate-400"
+          onClick={prev}
+          disabled={disablePrev}
+        >
+          Previous
+        </button>
         <button
-          className="w-2 h-2 active:bg-orange-400 hover:bg-[#b84b40] bg-white rounded-[50%] border-black border"
-          onClick={() => next()}
-        ></button>
+          className="active:bg-[#eb7669] hover:bg-[#b84b40] bg-black px-1 text-white rounded text-[13px] disabled:bg-slate-400"
+          onClick={next}
+          disabled={disableNext}
+        >
+          Next
+        </button>
       </span>
     </div>
   );

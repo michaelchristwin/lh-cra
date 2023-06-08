@@ -10,6 +10,7 @@ import BookASession from "./book-a-session";
 import BecomeATutor from "./become-a-tutor";
 import Faqs from "./faqs";
 import { useEffect } from "react";
+import PrivacyPolicy from "./privacypolicy";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/book-a-session" Component={BookASession} />
           <Route path="/become-a-tutor" Component={BecomeATutor} />
           <Route path="/faqs" Component={Faqs} />
+          <Route path="/privacy-policy" Component={PrivacyPolicy} />
         </Routes>
       </Layout>
     </Router>

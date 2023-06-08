@@ -253,7 +253,9 @@ function Footer() {
           >
             Developed by Michael Christwin
           </Link>
-          <p className="float-right  text-[13px]">Privacy Policy</p>
+          <Link to={`/privacy-policy`} className="float-right  text-[13px]">
+            Privacy Policy
+          </Link>
         </div>
       </section>
     </footer>
