@@ -41,7 +41,7 @@ function Steps() {
             <img
               src={Black}
               alt="Student with book"
-              className="lg:w-[550px] lg:h-[550px] lg:rounded-[12px] lg:block hidden border-[#b74b40] border-[3px] ml-8"
+              className="lg:w-[35vw] lg:h-[80vh] lg:rounded-[12px] lg:block hidden border-[#b74b40] border-[3px] ml-8"
             />
           </div>
         </div>

@@ -13,7 +13,7 @@ function Home() {
         <img
           src={TopElipse}
           alt="svg"
-          className="draw1 lg:h-[130px] lg:w-[100px] h-[60px] w-[48px]"
+          className="draw1 lg:h-[100px] lg:w-[80px] h-[60px] w-[48px]"
         />
       </section>
       <Hero />

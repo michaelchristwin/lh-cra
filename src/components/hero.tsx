@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Dia, Lela, Loki, Reading, Semic, Star } from "../images";
+import Reason from "./reason";
 
 function Hero() {
   return (
@@ -7,7 +8,7 @@ function Hero() {
       <div className="flex justify-between done-right pb-5">
         <section className="service">
           <h1
-            className={`block service-title`}
+            className={`block service-title font-[700] lg:text-[55px] text-[28px]`}
             style={{ fontFamily: "CustomFont" }}
           >
             Tutoring{` `}
@@ -57,7 +58,7 @@ function Hero() {
             <img
               src={Reading}
               alt="Student"
-              className="stud-img lg:w-[650px] lg:h-[550px] w-[450px] h-[550px]"
+              className="stud-img w-[40vw] h-[80vh]"
             />
           </div>
         </section>
@@ -92,75 +93,27 @@ function Hero() {
         </aside>
       </section>
       <div className="card-cont px-3 lg:px-1">
-        <div className="lg:pt-6 grid lg:grid-cols-4 grid-cols-2 gap-3">
-          <div className="lg:py-2 py-2 shadow border-0" id="card">
-            <img
-              src={Dia}
-              className="block mx-auto"
-              alt="..."
-              id="card-img"
-              width={85}
-              height={85}
-            />
-            <div className="card-body">
-              <h5 className="card-title">Well-Vetted Tutors</h5>
-              <p className="card-text">
-                Our tutors are highly qualified, passionate, and well-educated
-                at top universities.
-              </p>
-            </div>
-          </div>
-          <div className="lg:py-3 py-2 shadow border-0 lg:ml-4 ml-0" id="card">
-            <img
-              src={Lela}
-              className="block mx-auto"
-              alt="..."
-              id="card-img"
-              width={85}
-              height={85}
-            />
-            <div className="card-body">
-              <h5 className="card-title">We Come to You</h5>
-              <p className="card-text">
-                We meet at the pupil's home or local library and we also offer
-                online lessons.
-              </p>
-            </div>
-          </div>
-          <div className="lg:py-3 py-2 shadow border-0 lg:ml-4 ml-0" id="card">
-            <img
-              src={Star}
-              className="block mx-auto"
-              alt="..."
-              id="card-img"
-              width={85}
-              height={85}
-            />
-            <div className="card-body">
-              <h5 className="card-title">Your Future</h5>
-              <p className="card-text">
-                We share knowledge that can help in all areas of life, not just
-                the subject/s we are focusing on.
-              </p>
-            </div>
-          </div>
-          <div className="lg:py-3 py-2 shadow border-0 lg:ml-4 ml-0" id="card">
-            <img
-              src={Loki}
-              className="mx-auto block"
-              alt="..."
-              id="card-img"
-              width={85}
-              height={85}
-            />
-            <div className="card-body">
-              <h5 className="card-title">We Love Effort</h5>
-              <p className="card-text">
-                The growth mindset is a lifelong asset. The result isn't nearly
-                as important as the effort.
-              </p>
-            </div>
-          </div>
+        <div className="lg:pt-6 grid lg:grid-cols-4 grid-cols-2 gap-3 place-items-center">
+          <Reason
+            img={Dia}
+            title="Well-Vetted Tutors"
+            body="Our tutors are highly qualified, passionate, and well-educated at top universities."
+          />
+          <Reason
+            img={Lela}
+            title="We Come to You"
+            body="We meet at the pupil's home or local library and we also offer online lessons."
+          />
+          <Reason
+            img={Star}
+            title="Your Future"
+            body="We share knowledge that can help in all areas of life, not just the subject/s we are focusing on."
+          />
+          <Reason
+            img={Loki}
+            title="We Love Effort"
+            body="The growth mindset is a lifelong asset. The result isn't nearly as important as the effort."
+          />
         </div>
       </div>
     </div>

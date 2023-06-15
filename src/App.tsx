@@ -11,12 +11,14 @@ import BecomeATutor from "./become-a-tutor";
 import Faqs from "./faqs";
 import { useEffect } from "react";
 import PrivacyPolicy from "./privacypolicy";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
       <Layout>
+        <Toaster />
         <Routes>
           <Route path="/" Component={Home} />
           <Route path="/book-a-session" Component={BookASession} />
