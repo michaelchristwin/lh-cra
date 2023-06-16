@@ -1,12 +1,18 @@
 import FaqData from "./components/faqdata";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Expand, Shrink } from "./images";
 
-function Faq({ faq }: any) {
+function Faq({ faq, activeFaq, setActiveFaq }: any) {
   const [show, setShow] = useState(false);
   const handleClick = () => {
     setShow((prevState) => !prevState);
+    setActiveFaq(faq.title);
   };
+
+  useEffect(() => {
+    setShow(activeFaq === faq.title); // Show the FAQ if its title matches the active FAQ
+  }, [activeFaq, faq.title]);
+
   return (
     <div className="border-0 shadow mx-auto lg:p-4 px-[0.43rem] py-2 mb-3 rounded lg:w-[800px] w-[90%]">
       <div className="flex ">
@@ -27,6 +33,8 @@ function Faq({ faq }: any) {
 }
 
 function Faqs() {
+  const [activeFaq, setActiveFaq] = useState(""); // Initialize active FAQ title as an empty string
+
   return (
     <div className="mt-[100px]">
       <p
@@ -36,7 +44,12 @@ function Faqs() {
         FAQS
       </p>
       {FaqData.map((faq) => (
-        <Faq key={faq.title} faq={faq} />
+        <Faq
+          key={faq.title}
+          faq={faq}
+          activeFaq={activeFaq}
+          setActiveFaq={setActiveFaq}
+        />
       ))}
     </div>
   );

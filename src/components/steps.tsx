@@ -48,7 +48,7 @@ function Steps() {
             />
           </div>
         </div>
-        <div className="mx-auto overflow-y-scroll no-scrollbar lg:w-[40vw] w-[80vw] h-[40vh] lg:h-[70vh] rounded-[50px] border-x lg:rounded-none mb-6">
+        <div className="mx-auto overflow-y-scroll no-scrollbar lg:w-[40vw] w-[80vw] h-[40vh] lg:h-[70vh] rounded-[50px] border-x mb-6">
           <Step
             img1={One}
             img2={First}
