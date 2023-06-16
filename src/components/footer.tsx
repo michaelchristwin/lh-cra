@@ -89,7 +89,7 @@ function Footer() {
             <div className="lg:pt-3 mx-3 lg:mx-0">
               <h4 className="social-title">Contact Us</h4>
               <div className="flex socials">
-                <Link to="tel:503-342-7214" target="__blank" className="me-2">
+                <Link to="tel:+503-342-7214" target="__blank" className="me-2">
                   <img
                     src={Telephone}
                     alt="telephone"
@@ -218,7 +218,7 @@ function Footer() {
           <div className="lg:pt-3 lg:mx-0">
             <h4 className="social-title">Contact Us</h4>
             <div className="mt-2 block socials">
-              <Link to="tel:503-342-7214" className="mr-2">
+              <Link to="tel:+503-342-7214" className="mr-2">
                 <img
                   src={Telephone}
                   alt="telephone"

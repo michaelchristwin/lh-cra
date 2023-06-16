@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}
+
 @font-face {
   font-family: "CustomFont";
   src: url("./fonts/AGaramondPro-Bold.otf") format("truetype");
@@ -43,9 +58,7 @@
   line-height: 36px;
   margin-top: 40px;
 }
-.book-btn:hover {
-  background-color: black;
-}
+
 .d-review {
   font-size: 18px;
   line-height: 24px;
@@ -184,12 +197,7 @@ body {
   font-weight: 300;
   font-size: 20px;
 }
-.all-steps {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: auto;
-  margin-left: auto;
-}
+
 .step {
   width: fit-content;
 }
@@ -226,10 +234,6 @@ body {
 .tutor {
   width: 500px;
   margin-left: 150px !important;
-}
-
-.become-btn:hover {
-  background-color: black;
 }
 .become-btn {
   background-color: #a63634;
@@ -351,11 +355,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.sub-btn:hover {
-  background-color: black;
-  color: white;
-}
-
 .in-touch {
   height: fit-content;
   margin-left: 70px;
@@ -574,9 +573,6 @@ body {
     height: 240px;
     padding: 10px;
   }
-  .all-steps {
-    margin-top: 0px;
-  }
   .newsletter {
     font-size: 12px;
     font-weight: 700;
@@ -653,6 +649,8 @@ body {
   .become-btn {
     font-size: 11px;
     line-height: 11px;
+    margin-left: 100px;
+    margin-top: -20px;
     width: 122px;
     height: 30px;
   }
@@ -691,10 +689,6 @@ body {
   }
   .formt-sm {
     display: block;
-  }
-  .become-btn {
-    margin-left: 100px;
-    margin-top: -20px;
   }
   .sub-tut {
     height: 60px !important;

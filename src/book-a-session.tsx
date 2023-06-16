@@ -2,81 +2,93 @@ import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Mail, Phone } from "./images";
+import { toast } from "react-hot-toast";
 
-type Data = {
+interface Data {
   username: string;
   email: string;
   phone: string;
-  why: string;
-};
+  why?: string;
+}
 
 function BookASession() {
-  const [sessionData, setsessionData] = useState({
+  const [sessionData, setSessionData] = useState({
     username: "",
     email: "",
     phone: "",
     why: "",
   } as Data);
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   // Error Object
-  const [sessionerror, setSessionError] = useState<Partial<Data>>({});
+  const [sessionError, setSessionError] = useState<Partial<Data>>({});
 
   // Form Handler
-  const handleInputData = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleInputData = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const errors = validate(sessionData);
     setSessionError(errors);
 
     if (Object.keys(errors).length === 0) {
-      axios
-        .post("http://127.0.0.1:8000/api/students", sessionData)
-        .then(() => {
-          console.log("Form submitted successfully!");
-          console.log("Data:", sessionData);
-          setsessionData({
-            username: "",
-            email: "",
-            phone: "",
-            why: "",
-          });
-          setSessionError({});
-        })
-        .catch(({ message }) => {
-          console.log(message);
+      try {
+        setIsSubmitting(true); // Disable the submit button
+
+        await axios.post(
+          "http://localhost:3001/api/tutor-registration",
+          sessionData
+        );
+
+        console.log("Form submitted successfully!");
+        toast.success("Form Submitted");
+        console.log("Data:", sessionData); // Remove in production
+        setSessionData({
+          username: "",
+          email: "",
+          phone: "",
+          why: "",
         });
+        setSessionError({});
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setIsSubmitting(false); // Enable the submit button after submission or error
+      }
+    } else if (Object.keys(sessionError).length > 0) {
+      toast.error(errors.username || errors.email || errors.phone || "");
     }
   };
 
-  const handleinput = (
+  // OnChange Listener
+  const onChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setsessionData((prevsessionData) => ({
+    setSessionData((prevsessionData) => ({
       ...prevsessionData,
       [e.target.name]: e.target.value,
     }));
   };
 
-  const emailRegex =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  const phoneRegex = /^\+?\d{1,3}[-\s]?\d{1,14}$/;
-
+  // Validator
   const validate = (values: Data) => {
+    const emailRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const phoneRegex = /^\+?\d{1,3}[-\s]?\d{1,14}$/;
     const errors: Partial<Data> = {};
-
     if (!values.username) {
-      errors.username = "Username is required";
+      errors.username = "Fill in the missing fields";
+    } else if (!values.email) {
+      errors.email = "Fill in the missing fields";
+    } else if (!values.phone) {
+      errors.phone = "Fill in the missing fields";
     }
 
-    if (!values.email) {
-      errors.email = "Email is required";
-    } else if (!emailRegex.test(values.email)) {
+    if (!emailRegex.test(values.email)) {
       errors.email = "Enter a valid email";
     }
 
-    if (!values.phone) {
-      errors.phone = "Phone number is required";
-    } else if (!phoneRegex.test(values.phone)) {
-      errors.phone = "Please enter a number";
+    if (!phoneRegex.test(values.phone)) {
+      errors.phone = "Enter a valid phone number";
     }
 
     return errors;
@@ -108,13 +120,6 @@ function BookASession() {
           </div>
           <div className="mt-4 mx-auto">
             <fieldset className="mx-auto">
-              <p className="form-error">
-                {typeof sessionerror === "object" &&
-                sessionerror !== null &&
-                Object.keys(sessionerror).length !== 0
-                  ? sessionerror.username
-                  : ""}
-              </p>
               <label htmlFor="name" className="block">
                 Name*
               </label>
@@ -124,17 +129,10 @@ function BookASession() {
                 value={sessionData.username}
                 className="block border rounded border-[#b4b2b2] h-[36px] pl-2 w-[320px] lg:w-[400px]"
                 name="username"
-                onChange={handleinput}
+                onChange={onChange}
               />
             </fieldset>
             <fieldset className="mx-auto pt-3">
-              <p className="form-error">
-                {typeof sessionerror === "object" &&
-                sessionerror !== null &&
-                Object.keys(sessionerror).length !== 0
-                  ? sessionerror.email
-                  : ""}
-              </p>
               <label htmlFor="email" className="block">
                 Email*
               </label>
@@ -144,18 +142,11 @@ function BookASession() {
                 value={sessionData.email}
                 className="block border rounded border-[#b4b2b2] h-[36px] w-[320px] lg:w-[400px] pl-2"
                 name="email"
-                onChange={handleinput}
+                onChange={onChange}
               />
             </fieldset>
           </div>
           <fieldset className="mx-auto pt-3">
-            <p className="form-error">
-              {typeof sessionerror === "object" &&
-              sessionerror !== null &&
-              Object.keys(sessionerror).length !== 0
-                ? sessionerror.phone
-                : ""}
-            </p>
             <label htmlFor="phone" className="block">
               Phone
             </label>
@@ -166,7 +157,7 @@ function BookASession() {
               className="block border rounded border-[#b4b2b2] h-[36px] w-[320px] lg:w-[400px] pl-2"
               name="phone"
               value={sessionData.phone}
-              onChange={handleinput}
+              onChange={onChange}
             />
           </fieldset>
 
@@ -179,9 +170,13 @@ function BookASession() {
             rows={8}
             name="why"
             value={sessionData.why}
-            onChange={handleinput}
+            onChange={onChange}
           ></textarea>
-          <button className="rounded py-1 sub-btn px-4" type="submit">
+          <button
+            className="rounded py-1 sub-btn hover:opacity-75 disabled:opacity-25 px-4"
+            type="submit"
+            disabled={isSubmitting}
+          >
             Submit
           </button>
         </form>

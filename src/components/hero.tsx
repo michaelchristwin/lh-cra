@@ -40,7 +40,7 @@ function Hero() {
           />
 
           <Link to={`/book-a-session`}>
-            <button className="rounded-[4px] px-2 book-btn h-10">
+            <button className="rounded-[4px] px-2 book-btn hover:opacity-75 h-10">
               Book a Session
             </button>
           </Link>
@@ -58,7 +58,7 @@ function Hero() {
             <img
               src={Reading}
               alt="Student"
-              className="stud-img w-[40vw] h-[80vh]"
+              className="stud-img w-[45vw] h-[80vh]"
             />
           </div>
         </section>

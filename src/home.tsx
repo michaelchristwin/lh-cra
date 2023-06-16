@@ -120,7 +120,7 @@ function Home() {
             />
 
             <Link to={`/become-a-tutor`}>
-              <button className="become-btn mt-2 lg:mt-5 px-2 rounded">
+              <button className="become-btn hover:opacity-75 mt-2 lg:mt-5 px-2 rounded">
                 Become a Tutor
               </button>
             </Link>

@@ -1,13 +1,16 @@
 import {
   Black,
-  Line,
   Nearsm,
   One,
   Studhsm,
   Subtract,
   Three,
   Two,
+  Second,
+  First,
+  Third,
 } from "../images";
+import Step from "./step";
 
 function Steps() {
   return (
@@ -41,56 +44,29 @@ function Steps() {
             <img
               src={Black}
               alt="Student with book"
-              className="lg:w-[35vw] lg:h-[80vh] lg:rounded-[12px] lg:block hidden border-[#b74b40] border-[3px] ml-8"
+              className="lg:w-[30vw] lg:h-[72vh] lg:rounded-[12px] lg:block hidden border-[#b74b40] border-[3px] ml-8"
             />
           </div>
         </div>
-        <div className="all-steps">
-          <div className="flex flex-row mx-1 ">
-            <img
-              src={One}
-              alt="One"
-              className="num-fig lg:h-[90px] lg:w-[90px] w-[50px] h-[50px]"
-            />
-            <img src={Line} alt="line" className="line h-[100px] w-[2px]" />
-            <div className="border shadow text-box text-left step justify-center">
-              <h3 className="step-title">Step One</h3>
-              <div className="lg:px-4 px-2 flex flex-col d-step">
-                <span>Inquire about our tutoring services by filling-out</span>
-                <span>and submitting the “Book a Session” form.</span>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-row my-3">
-            <img
-              src={Two}
-              alt="Two"
-              className="num-fig lg:h-[90px] lg:w-[90px] w-[50px] h-[50px]"
-            />
-            <div className="border shadow text-box p-2 step">
-              <h3 className="step-title">Step Two</h3>
-              <div className="lg:px-4 px-2 flex flex-col d-step">
-                <span>Within 24 hours an advisor will contact you to go</span>
-                <span>over the student`s tutoring goals & needs.</span>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-row my-3">
-            <img
-              src={Three}
-              alt="Three"
-              className="num-fig lg:h-[90px] lg:w-[90px] w-[50px] h-[50px]"
-            />
-            <div className="border shadow text-box p-2 step">
-              <h3 className="step-title">Step Three</h3>
-              <div className="lg:px-4 px-2 flex flex-col d-step">
-                <span>The advisor will find an ideal tutor match and set</span>
-                <span>
-                  up a free session to ensure he/she is the right fit.
-                </span>
-              </div>
-            </div>
-          </div>
+        <div className="mx-auto overflow-y-scroll no-scrollbar lg:w-[40vw] w-[80vw] h-[40vh] lg:h-[70vh] rounded-[50px] border-x lg:rounded-none mb-6">
+          <Step
+            img1={One}
+            img2={First}
+            step={`Inquire about our tutoring services by filling-out and submitting the “Book a Session” form.`}
+            className="lg:w-[10vw] lg:left-[35%] w-[30vw] lg:top-[28%] left-[30%]"
+          />
+          <Step
+            img1={Two}
+            img2={Second}
+            step={`Within 24 hours an advisor will contact you to go over the student's tutoring goals & needs.`}
+            className="h-[18vh] w-[50vw] left-[20%]"
+          />
+          <Step
+            img1={Three}
+            img2={Third}
+            step={`The advisor will find an ideal tutor match and setup a free session to ensure he/she is the right fit.`}
+            className="lg:w-[17vw] lg:left-[30%] lg:top-[26%]"
+          />
         </div>
       </aside>
       <div className="empty-sm">
