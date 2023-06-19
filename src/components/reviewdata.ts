@@ -48,6 +48,12 @@ const ReviewData: Review[] = [
     review: `Mike rocks. I reached out to him two days before my GED math test, needing a complete crash coarse, and he came through. He had tricks that made learning math easier than I had remembered. Cool dude too! Enjoyed kicken it. Thanks Mike.`,
   },
   {
+    name: "Julie Spears",
+    img: require("../images/Avatars/avatar4.png"),
+    review:
+      "My experience with Learnhall has been very positive. Mike took his time to fully understand the needs of my child and pair them with a good fitting tutor. Our tutor, Justin, was patient and kind with my child and was able to adjust based on my child's knowledge and ability. I highly recommend Justin as a tutor and Learnhall as a service for families.",
+  },
+  {
     name: "Andrew Rockefeller",
     img: require("../images/Avatars/avatar7.png"),
     review:
@@ -100,6 +106,12 @@ const ReviewData: Review[] = [
     name: "Callie Martin",
     img: require("../images/Avatars/avatar7.png"),
     review: `Learnhall (& tutor Mark) helped my son find academic success and confidence in Geometry and Algebra 2 over the last two years. We all love Mark! Not only is he extremely professional and good at what he does, but his attitude is always friendly, encouraging and supportive. Five stars!`,
+  },
+  {
+    name: "M McGrath",
+    img: require("../images/Avatars/avatar3.png"),
+    review:
+      "My son who has ADHD, has been working with Owen or Mike for the past 3 years and both are wonderful. They keep him focused and on track to get his work done. They explain things completely and thoroughly and are wonderful examples of hard working men! I love that they use all their resources and knowledge to keep him engaged, working and successful. I would highly recommend this group to anyone if they would like to make their child successful and eager to learn.",
   },
 ];
 export default ReviewData;
