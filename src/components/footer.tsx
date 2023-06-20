@@ -6,17 +6,15 @@ import { FB, IG, Leaf, Message, Nameblack, TWTR, Telephone } from "../images";
 function Footer() {
   function handleClick(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log(email);
     axios
       .post(
         "https://learnhall.us15.list-manage.com/subscribe/post?u=fc6c144a7a2a60d6e5ab4a7e7&amp;id=bc737fdf83&amp;v_id=2832&amp;f_id=006b9fe0f0",
         email
       )
       .then((response) => {
-        console.log(response);
+        // console.log(response);
       })
       .catch(({ message }) => {
-        console.log(message);
         setEmail("");
       });
   }

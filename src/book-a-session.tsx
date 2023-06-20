@@ -35,13 +35,12 @@ function BookASession() {
         setIsSubmitting(true); // Disable the submit button
 
         await axios.post(
-          "http://localhost:3001/api/tutor-registration",
+          "http://worldofshows.com/api/tutor-registration",
           sessionData
         );
 
-        console.log("Form submitted successfully!");
         toast.success("Form Submitted");
-        console.log("Data:", sessionData); // Remove in production
+        // console.log("Data:", sessionData); // Remove in production
         setSessionData({
           username: "",
           email: "",
@@ -50,7 +49,7 @@ function BookASession() {
         });
         setSessionError({});
       } catch (error) {
-        console.log(error);
+        toast.error("Submission Failed");
       } finally {
         setIsSubmitting(false); // Enable the submit button after submission or error
       }
