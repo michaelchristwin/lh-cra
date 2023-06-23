@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Dollar, Scholar, Work } from "./images";
 import { toast } from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 interface Data {
   username: string;
@@ -87,6 +88,15 @@ function BecomeATutor() {
 
   return (
     <main>
+      <Helmet>
+        <title>
+          Become a Tutor | Join Our Team of Expert Tutors | Learnhall
+        </title>
+        <meta
+          name="description"
+          content="Passionate about teaching? Join our team of expert tutors at Learnhall and make a difference in students' lives. Become a tutor and share your knowledge with motivated learners. Apply now!"
+        />
+      </Helmet>
       <section className="flex form-parent pt-[50px]">
         <form
           className="p-11 shadow my-form border rounded relative"

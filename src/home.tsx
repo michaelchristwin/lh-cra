@@ -5,10 +5,15 @@ import { Link } from "react-router-dom";
 import ReviewsSm from "./components/review-sm";
 import { TopElipse, Subtract3, Books, Semic } from "./images";
 import VideoPlayer from "./components/videoplayer";
+import { Helmet } from "react-helmet";
 
 function Home() {
   return (
     <main className="overflow-hidden">
+      <Helmet>
+        <title>Home</title>
+        <meta name="description" content="Welcome to Learnall" />
+      </Helmet>
       <section id="top">
         <img
           src={TopElipse}

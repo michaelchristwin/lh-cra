@@ -1,6 +1,7 @@
 import FaqData from "./components/faqdata";
 import { useEffect, useState } from "react";
 import { Expand, Shrink } from "./images";
+import { Helmet } from "react-helmet";
 
 function Faq({ faq, activeFaq, setActiveFaq }: any) {
   const [show, setShow] = useState(false);
@@ -37,6 +38,16 @@ function Faqs() {
 
   return (
     <div className="mt-[100px]">
+      <Helmet>
+        <title>
+          Frequently Asked Questions (FAQ) | Get Answers to Common Queries |
+          Learnhall
+        </title>
+        <meta
+          name="description"
+          content="Have questions about our tutoring service? Find answers to common queries in our comprehensive FAQ section. Get all the information you need to make informed decisions. Visit Learnhall and explore our FAQ page now!"
+        />
+      </Helmet>
       <p
         className="font-[500] lg:text-[2.375rem] text-[1.7rem] text-center"
         style={{ fontFamily: "CustomFont" }}

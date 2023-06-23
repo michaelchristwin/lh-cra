@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Mail, Phone } from "./images";
 import { toast } from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 interface Data {
   username: string;
@@ -92,6 +93,13 @@ function BookASession() {
 
   return (
     <main className="mt-[50px]">
+      <Helmet>
+        <title>Book a Session | Learnhall</title>
+        <meta
+          name="description"
+          content="Ready to enhance your learning? Book a personalized tutoring session with experienced tutors at Learnhall. Get expert guidance and achieve academic success. Schedule your session today!"
+        />
+      </Helmet>
       <section className="flex py-3 form-parent">
         <form
           className="p-11 shadow my-form border rounded block"

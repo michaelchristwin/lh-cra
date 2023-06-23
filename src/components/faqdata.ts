@@ -6,7 +6,7 @@ const FaqData = [
   },
   {
     title: "How do I hire a tutor?",
-    content: `Inquire about our tutoring services by filling out and submitting the “Book a Session” form.
+    content: `Inquire about our tutoring services by filling out and submitting the <a class="text-blue-500 underline hover:text-blue-700" href="/book-a-session">“Book a Session”</a> form.
         Within 24 hours an advisor will contact you to go over the student's tutoring goals & needs.
         The advisor will find an ideal tutor match and set up a free session to ensure that s/he is the right fit.`,
   },
