@@ -27,7 +27,7 @@ function Hero() {
               Our tutors are bright and enthusiastic and seek to
             </span>
             <span className="block">
-              bring the best of an individual learners potential
+              bring the best of an individual learners' potential
             </span>
             <span className="block">in both academics as well as life.</span>
           </aside>
