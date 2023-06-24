@@ -13,7 +13,7 @@ function Reason({ img, title, body }: ReasonProps) {
       <img
         src={img}
         className="block mx-auto"
-        alt="..."
+        alt="Icon"
         id="card-img"
         width={85}
         height={85}

@@ -21,7 +21,7 @@ function Navbar() {
             <span className="flex">
               <img
                 src={Leaf}
-                alt="Learnhall Logo"
+                alt="Learnhall"
                 className="mx-1 logo lg:h-[30px] lg:w-[30px] w-[20px] h-[20px]"
                 height={30}
                 width={30}

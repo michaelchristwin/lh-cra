@@ -138,6 +138,9 @@
   line-height: 30px;
   font-family: Helvetica;
 }
+.about {
+  font-family: Helvetica;
+}
 body {
   font-family: Helvetica;
   overflow-x: hidden;

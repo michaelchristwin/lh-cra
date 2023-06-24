@@ -7,29 +7,20 @@ function Hero() {
     <div className="lg:pt-[30px] pt-[140px]">
       <div className="flex justify-between done-right pb-5">
         <section className="service">
-          <h1
+          <pre
             className={`block service-title font-[700] lg:text-[55px] text-[28px]`}
             style={{ fontFamily: "CustomFont" }}
           >
-            Tutoring{` `}
-            <br className="break" />
-            Done Right
-          </h1>
+            {`Tutoring 
+Done Right`}
+          </pre>
           <span className="private">Private in-person & online tutoring</span>
           <aside className="mt-3 about-service">
-            <span className="block">
-              If you want to learn an academic subject for
-            </span>
-            <span className="block">
-              an exam, we want to be the company you choose.
-            </span>
-            <span className="block">
-              Our tutors are bright and enthusiastic and seek to
-            </span>
-            <span className="block">
-              bring the best of an individual learners' potential
-            </span>
-            <span className="block">in both academics as well as life.</span>
+            <pre className="block about">{`If you want to learn an academic subject for
+an exam, we want to be the company you choose.
+Our tutors are bright and enthusiastic and seek to
+bring the best of an individual learners' potential
+in both academics as well as life.`}</pre>
           </aside>
           <img
             src={Reading}
@@ -71,25 +62,19 @@ function Hero() {
           Why you should choose us
         </h1>
         <aside className="choose">
-          <span className="block">
-            We love tutoring and we value the student's process. Our tutors
-            focus on each
-          </span>
-          <span className="choose d-block">
-            individual student and tailor the lessons around how he or she
-            learns best.
-          </span>
+          <pre
+            className="block"
+            style={{ fontFamily: "Helvetica" }}
+          >{`We love tutoring and we value the student's process. Our tutors focus on each
+individual student and tailor the lessons around how he or she learns best.`}</pre>
         </aside>
         <aside className="choice">
-          <span className="block">
-            We love tutoring and we value the student's
-          </span>
-          <span className="block">
-            process. Our tutors focus on each individual student
-          </span>
-          <span className="block">
-            and tailor the lessons around how s/he learns best.
-          </span>
+          <pre
+            className="block"
+            style={{ fontFamily: "Helvetica" }}
+          >{`We love tutoring and we value the student's
+process. Our tutors focus on each individual student
+and tailor the lessons around how s/he learns best.`}</pre>
         </aside>
       </section>
       <div className="card-cont px-3 lg:px-1">
