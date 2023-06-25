@@ -35,7 +35,7 @@ function BookASession() {
       try {
         setIsSubmitting(true); // Disable the submit button
 
-        await axios.post("http://localhost:3001/api/book-session", sessionData);
+        await axios.post("http://localhost:3001/api/students", sessionData);
 
         toast.success("Form Submitted");
         // console.log("Data:", sessionData); // Remove in production
