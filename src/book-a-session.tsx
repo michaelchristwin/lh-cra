@@ -38,7 +38,7 @@ function BookASession() {
         await axios.post("http://localhost:3001/api/students", sessionData);
 
         toast.success("Form Submitted");
-        // console.log("Data:", sessionData); // Remove in production
+         console.log("Data:", sessionData); // Remove in production
         setSessionData({
           username: "",
           email: "",

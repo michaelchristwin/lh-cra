@@ -36,7 +36,7 @@ function BecomeATutor() {
 
         await axios.post("http://localhost:3001/api/tutors", sessionData);
         toast.success("Form Submitted");
-        // console.log("Data:", sessionData); // Remove in production
+        console.log("Data:", sessionData); // Remove in production
         setSessionData({
           username: "",
           email: "",
@@ -170,7 +170,7 @@ function BecomeATutor() {
               name="tell"
               value={sessionData.tell}
               id="textarea1"
-              className="border border-[#b4b2b2] rounded w-[97%]"
+              className="border border-[#b4b2b2] rounded w-[97%] px-2"
               rows={8}
               onChange={onChange}
             ></textarea>
