@@ -36,7 +36,7 @@ function BookASession() {
         setIsSubmitting(true); // Disable the submit button
 
         await axios.post(
-          "https://learnhall.onrender.com:3001/api/students",
+          "https://learnhall.onrender.com/api/students",
           sessionData
         );
 

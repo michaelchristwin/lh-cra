@@ -35,7 +35,7 @@ function BecomeATutor() {
         setIsSubmitting(true); // Disable the submit button
 
         await axios.post(
-          "https://learnhall.onrender.com:3001/api/tutors",
+          "https://learnhall.onrender.com/api/tutors",
           sessionData
         );
         toast.success("Form Submitted");
